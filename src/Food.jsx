@@ -6,7 +6,7 @@ export default function Food({data}){
             <img src={data.image} alt={data.name} className="w-full object-cover saturate-150 contrast-150 contrast-75 group-hover/food:contrast-100 transition-all"/>
 
             <div className="p-6 box-border">
-                <h2 className="text-2xl group-hover/food:tracking-widest transition-all">
+                <h2 className="text-2xl group-hover/food:tracking-widest transition-all whitespace-nowrap w-60 sm:w-40 lg:w-48 overflow-hidden text-ellipsis">
                     {data.name}
                 </h2>
                 <p className="h-12 overflow-hidden text-clip">{data.description}</p>
