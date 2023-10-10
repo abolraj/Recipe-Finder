@@ -18,6 +18,21 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.title-image-cont {
+  background-image: url(/images/food_logo.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #b9b6b6;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,10 +48,20 @@
   }
 }
 
-.card {
-  padding: 2em;
+::-webkit-scrollbar {
+  /* Customize the scrollbar width */
+  width: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+  background-color: #15151530;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
+  margin: 10px !important;
+  background-color: theme('colors.gray.700');
+  border-radius: 100px;
 }
