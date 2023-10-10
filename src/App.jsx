@@ -27,7 +27,12 @@ function App() {
           return {
             name: recipe.strMeal,
             description: recipe.strInstructions,
-            image: recipe.strMealThumb
+            image: recipe.strMealThumb,
+
+            area: recipe.strArea,
+            tags: recipe?.strTags?.split(','),
+            ingredients: Object.entries(recipe).filter(entry=>entry[1] && entry[0].startsWith('strIngredient')).map(entry => entry[1]),
+            measures: Object.entries(recipe).filter(entry=>entry[1] && entry[0].startsWith('strMeasure')).map(entry => entry[1]),
           }
         }))
       },
@@ -46,8 +51,8 @@ function App() {
       <ul className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center">
         { recipes.map( (recipe,i) => {
             return (
-              <li key={i}>
-                <Food data={recipe}/>
+              <li key={recipe.name}>
+                <Food data={recipe} isSingle={1}/>
               </li>
             )
           }
