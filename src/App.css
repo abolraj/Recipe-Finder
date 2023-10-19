@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
-  font-family: Quicksand, 'Courier New', Courier, monospace;
+  font-family: Quicksand;
 }
 
 #root {
@@ -37,6 +37,11 @@
   background-position: center;
   background-size: cover;
   background-color: #b9b6b6;
+}
+@keyframes bg-load-anim {
+  0% {
+    
+  }
 }
 
 @keyframes logo-spin {
