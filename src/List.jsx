@@ -46,13 +46,13 @@ export default function List() {
     }, [search])
 
     return (
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col gap-7 md:items-center">
             <Search onSearch={handleSearch.bind(this)} />
 
-            <ul className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center">
+            <ul className="flex flex-col sm:flex-row gap-4 flex-wrap justify-start lg:w-[63rem]">
                 {recipes.map((recipe, i) => {
                     return (
-                        <li key={recipe.name}>
+                        <li key={recipe.name} className="grow sm:w-52 lg:w-60">
                             <Link to={'/show/'+recipe.id} className='text-inherit hover:text-inherit'>
                                 <Food data={recipe} />
                             </Link>
